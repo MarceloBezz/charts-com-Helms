@@ -13,4 +13,4 @@ spec:
   selector:
     app: {{ $service.label }}
 ---
-{{-- end}}
+{{- end}}
