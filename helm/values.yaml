@@ -53,3 +53,11 @@ postgresql:
         init.sql: |
           CREATE DATABASE alurafood-pagamento;
           CREATE DATABASE alurafood-pedidos;
+
+loadbalancer:
+  - name: loadbalancer-eureka
+    port: 8081
+    selector: server
+  - name: loadbalancer-gateway
+    port: 8082
+    selector: gateway
