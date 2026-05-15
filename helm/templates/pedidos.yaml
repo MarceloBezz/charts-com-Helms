@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: pedidos
   labels:
+    {{- include "alura-foods-apps-labels" .| nindent 4}}
     app: pedidos
 spec:
   replicas: {{ .Values.pedidos.replicaCount }}
